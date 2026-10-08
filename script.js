@@ -98,9 +98,6 @@
   const modal=document.getElementById('conversationModal');function closeModal(){if(!modal)return;if(typeof modal.close==='function'&&modal.open)modal.close();else modal.removeAttribute('open');document.body.classList.remove('modal-open')}
   document.querySelectorAll('[data-open-conversation]').forEach(b=>b.addEventListener('click',()=>{if(typeof modal.showModal==='function')modal.showModal();else modal.setAttribute('open','');document.body.classList.add('modal-open')}));document.querySelectorAll('[data-close-conversation]').forEach(b=>b.addEventListener('click',closeModal));modal?.addEventListener('click',e=>{if(e.target===modal)closeModal()});modal?.addEventListener('close',()=>document.body.classList.remove('modal-open'));
 
-  const interest=document.getElementById('interestSelect'),route=document.getElementById('routeField');document.querySelectorAll('[data-route-choice]').forEach(b=>b.addEventListener('click',()=>{const r=b.dataset.routeChoice;interest.value=r;route.value=r;closeModal();document.getElementById('contact').scrollIntoView({behavior:'smooth'});setTimeout(()=>document.querySelector('#contact input[name="name"]').focus({preventScroll:true}),400)}));interest?.addEventListener('change',()=>route.value=interest.value);
-  interest?.addEventListener('change',()=>route.value=interest.value);
-
-})();
+  const interest=document.getElementById('interestSelect'),route=document.getElementById('routeField');document.querySelectorAll('[data-route-choice]').forEach(b=>b.addEventListener('click',()=>{const r=b.dataset.routeChoice;interest.value=r;route.value=r;closeModal();document.getElementById('contact').scrollIntoView({behavior:'smooth'});setTimeout(()=>document.querySelector('#contact input[name="name"]').focus({preventScroll:true}),400)}));interest?.addEventListener('change',()=>route.value=interest.value);})();
 
   
