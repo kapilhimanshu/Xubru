@@ -100,5 +100,4 @@
 
   const interest=document.getElementById('interestSelect'),route=document.getElementById('routeField');document.querySelectorAll('[data-route-choice]').forEach(b=>b.addEventListener('click',()=>{const r=b.dataset.routeChoice;interest.value=r;route.value=r;closeModal();document.getElementById('contact').scrollIntoView({behavior:'smooth'});setTimeout(()=>document.querySelector('#contact input[name="name"]').focus({preventScroll:true}),400)}));interest?.addEventListener('change',()=>route.value=interest.value);
 
-  document.getElementById('contactForm')?.addEventListener('submit',e=>{e.preventDefault();const f=e.currentTarget;if(!f.reportValidity())return;const d=new FormData(f),r=String(d.get('interest')||'General'),to=SALES_ROUTES[r]||SALES_ROUTES.General,n=String(d.get('name')||''),em=String(d.get('email')||''),c=String(d.get('company')||''),m=String(d.get('message')||''),subject=`[Xubru ${r} enquiry] ${c||n}`,body=[`Route: ${r}`,`Name: ${n}`,`Work email: ${em}`,`Company: ${c||'-'}`,'','Message:',m||'-','',`Page: ${location.href}`].join('\n');location.href=`mailto:${encodeURIComponent(to)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`});
-})();
+  
