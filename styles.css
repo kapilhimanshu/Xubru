@@ -14,3 +14,17 @@ html[data-theme="dark"]{--bg:#07111f;--surface:#0c1a2c;--surface-2:#0a1626;--tex
 @media(max-width:820px){.container{width:min(var(--container),calc(100% - 32px))}.section{padding:82px 0}.conversation-button{display:none}.header-actions{margin-left:auto}.hero{padding:68px 0}.hero h1{font-size:clamp(42px,10vw,58px)}.hero-stats{grid-template-columns:1fr}.statement-grid{grid-template-columns:1fr;gap:20px}.product-grid{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr;gap:20px}.route-grid{grid-template-columns:1fr}}
 @media(max-width:620px){.nav-wrap{height:70px}.brand-copy small{display:none}.language-control{height:38px}.language-control select{max-width:70px}.theme-switch button span:last-child{display:none}.showcase-top{display:grid}.global-chip{width:max-content}.showcase-body{grid-template-columns:28px 1fr;padding:15px 12px}.stack-card{grid-template-columns:42px 1fr}.stack-card small{display:none}.showcase-bottom{grid-template-columns:1fr 1fr}.showcase-bottom span:nth-child(2){border-inline-end:0}.showcase-bottom span:nth-child(-n+2){border-bottom:1px solid var(--line)}.form-row{grid-template-columns:1fr}.company-panel{padding:28px 22px}.modal-shell{padding:28px 20px}.footer-bottom{line-height:1.7}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}.reveal{opacity:1;transform:none}}
+.brand-logo {
+  display: block;
+  width: auto;
+  height: 42px;
+  max-width: 220px;
+}
+
+@media (max-width: 768px) {
+  .brand-logo {
+    height: 34px;
+    max-width: 180px;
+    }
+}
+}
